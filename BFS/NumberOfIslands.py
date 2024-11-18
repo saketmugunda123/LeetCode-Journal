@@ -20,4 +20,13 @@ class Solution(object):
                     if(newRow >= 0 and newRow < len(grid) and newCol >=0 and newCol < len(grid[0]) and grid[newRow][newCol] == '1'):
                         queue.append((newRow,newCol)) #valid neighbor
                         grid[newRow][newCol] = '0' #mark as visited
+        
+        islandCount = 0
+        for r in range(0, len(grid)):
+            for c in range(0, len(grid[0])):
+                if grid[r][c] == '1':
+                    BFS(r, c)
+                    islandCount +=1
+        
+        return islandCount
                     
