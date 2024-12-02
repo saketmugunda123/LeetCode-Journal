@@ -14,3 +14,5 @@ class Solution(object):
             answer.append(root.val)
             answer += right
             return answer
+            
+        return inOrder(root)
