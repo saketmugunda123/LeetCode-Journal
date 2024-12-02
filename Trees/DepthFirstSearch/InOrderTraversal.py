@@ -8,3 +8,9 @@ class Solution(object):
             answer = []
             if not root:
                 return []
+            left = inOrder(root.left)
+            right = inOrder(root.right)
+            answer += left
+            answer.append(root.val)
+            answer += right
+            return answer
